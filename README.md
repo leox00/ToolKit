@@ -1,2 +1,2 @@
 # ToolKit
- Simple batch toolkit :)
+A simple batch toolkit :)
