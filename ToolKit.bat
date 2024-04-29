@@ -193,20 +193,20 @@ echo      %ip%
 echo       ---------
 echo      Continent: %continent%
 echo      Country: %country%
-echo      City: %city%"
+echo      City: %city%
 echo      Coordinates(lat, long): %latitude% %longitude%
 echo      Time zone: %time_zone%
 echo.
-if %save% EQU 1 (
-    echo TRACEIP OUTPUT > ../save/traceIP.txt
-    echo. >> ../save/traceIP.txt
-    echo %ip% >> ../save/traceIP.txt
-    echo  --------- >> ../save/traceIP.txt
-    echo Continent: %continent% >> ../save/traceIP.txt
-    echo Country: %country% >> ../save/traceIP.txt
-    echo City: %city% >> ../save/traceIP.txt
-    echo Coordinates(lat, long): %latitude% %longitude% >> ../save/traceIP.txt
-    echo Time zone: %time_zone% >> ../save/traceIP.txt
+if %save% == 1 (
+    (echo TRACEIP OUTPUT) > ../save/traceIP.txt
+    (echo.) >> ../save/traceIP.txt
+    (echo %ip%) >> ../save/traceIP.txt
+    (echo  ---------) >> ../save/traceIP.txt
+    (echo Continent: %continent%) >> ../save/traceIP.txt
+    (echo Country: %country%) >> ../save/traceIP.txt
+    (echo City: %city%) >> ../save/traceIP.txt
+    (echo Coordinates^(lat, long^): %latitude% %longitude%) >> ../save/traceIP.txt
+    (echo Time zone: %time_zone%) >> ../save/traceIP.txt
     pause
     "" > ipinfo.json
     goto menu
