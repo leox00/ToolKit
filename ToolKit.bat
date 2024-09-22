@@ -181,7 +181,7 @@ title Trace IP
 type ".\banners\traceip.txt"
 echo.
 set /p ip="Enter the target IP>> "
-curl -s https://api.findip.net/%ip%/?token=01e50d025741485196e37ee3567be22c -o ipinfo.json
+curl -s https://api.findip.net/%ip%/?token=0123456789 -o ipinfo.json
 for /F %%i in ('.\jq.exe .continent.names.en ipinfo.json') do set continent=%%i
 for /F %%i in ('.\jq.exe .country.names.en ipinfo.json') do set country=%%i
 for /F %%i in ('.\jq.exe .city.names.en ipinfo.json') do set city=%%i
